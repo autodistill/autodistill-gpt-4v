@@ -15,6 +15,12 @@ This repository contains the code supporting the GPT-4V base model for use with 
 
 [GPT-4V](https://openai.com/research/gpt-4v-system-card), developed by OpenAI, is a multi-modal language model. With GPT-4V, you can ask questions about images in natural language. The `autodistill-gpt4v` module enables you to classify images and detect objects in images using GPT-4V.
 
+This model uses the [gpt-4-vision-preview API](https://openai.com/blog/new-models-and-developer-products-announced-at-devday) announced by OpenAI on November 6th, 2023.
+
+> [!NOTE]  
+> Using this project will incur billing charges for API calls to the OpenAI GPT-4 Vision API.
+> Refer to the [OpenAI pricing](https://openai.com/pricing) page for more information and to calculate your expected pricing. This package makes one API call per image you want to label.
+
 Read the full [Autodistill documentation](https://autodistill.github.io/autodistill/).
 
 Read the [GPT-4V Autodistill documentation](https://autodistill.github.io/autodistill/base_models/gpt_4v/).
