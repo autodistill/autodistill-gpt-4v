@@ -63,8 +63,7 @@ class GPT4V(DetectionBaseModel):
                             + base64.b64encode(open(input, "rb").read()).decode(
                                 "utf-8"
                             ),
-                        },
-                        "detail": "high"
+                        }
                     },
                 ],
             }
