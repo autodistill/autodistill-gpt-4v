@@ -13,7 +13,7 @@
 
 This repository contains the code supporting the GPT-4V base model for use with [Autodistill](https://github.com/autodistill/autodistill).
 
-[GPT-4V](https://openai.com/research/gpt-4v-system-card), developed by OpenAI, is a multi-modal language model. With GPT-4V, you can ask questions about images in natural language. The `autodistill-gpt4v` module enables you to classify images and detect objects in images using GPT-4V.
+[GPT-4V](https://openai.com/research/gpt-4v-system-card), developed by OpenAI, is a multi-modal language model. With GPT-4V, you can ask questions about images in natural language. The `autodistill-gpt4v` module enables you to classify images using GPT-4V.
 
 This model uses the [gpt-4-vision-preview API](https://openai.com/blog/new-models-and-developer-products-announced-at-devday) announced by OpenAI on November 6th, 2023.
 
