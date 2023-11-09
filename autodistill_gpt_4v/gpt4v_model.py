@@ -43,7 +43,7 @@ class GPT4V(DetectionBaseModel):
     ontology: CaptionOntology
     api_key: str = None
 
-    def __init__(self, ontology: CaptionOntology):
+    def __init__(self, ontology: CaptionOntology, api_key: str = None):
         self.api_key = api_key if api_key is not None else os.environ.get("OPENAI_API_KEY")
         self.client = OpenAI(api_key=self.api_key)
         self.ontology = ontology
