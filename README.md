@@ -50,7 +50,8 @@ base_model = GPT4V(
             "person": "person",
             "a forklift": "forklift"
         }
-    )
+    ),
+    api_key="OPENAI_API_KEY"
 )
 base_model.label("./context_images", extension=".jpeg")
 ```
