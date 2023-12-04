@@ -150,8 +150,9 @@ class GPT4V(DetectionBaseModel):
         if "none" not in self.ontology.prompts():
             self.ontology.prompts().append("none")
 
+        class_ids = []
+
         if self.prompt:
-            class_ids = []
             
             for line in response.choices[0].message.content.split("\n"):
                 if ":" in line:
