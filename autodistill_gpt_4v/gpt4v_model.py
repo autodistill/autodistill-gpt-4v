@@ -13,8 +13,9 @@ HOME = os.path.expanduser("~")
 class GPT4V(DetectionBaseModel):
     ontology: CaptionOntology
 
-    def __init__(self, ontology: CaptionOntology, api_key, prompt: str = None):
+    def __init__(self, ontology: CaptionOntology, api_key, model, prompt: str = None):
         self.client = OpenAI(api_key=api_key)
+        self.model = model
         self.ontology = ontology
         self.prompt = prompt
 
@@ -55,7 +56,7 @@ class GPT4V(DetectionBaseModel):
         print(payload[0]["content"][0])
 
         response = self.client.chat.completions.create(
-            model="gpt-4-vision-preview",
+            model=self.model,
             messages=payload,
             max_tokens=300,
         )
@@ -142,7 +143,7 @@ class GPT4V(DetectionBaseModel):
         ]
 
         response = self.client.chat.completions.create(
-            model="gpt-4-vision-preview",
+            model=self.model,
             messages=payload,
             max_tokens=300,
         )

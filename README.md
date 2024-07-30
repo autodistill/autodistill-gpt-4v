@@ -11,11 +11,14 @@
 
 # Autodistill GPT-4V Module
 
-This repository contains the code supporting the GPT-4V base model for use with [Autodistill](https://github.com/autodistill/autodistill).
+This repository contains the code supporting the GPT-4 vision models (gpt4v, gpt4turbo, gpt4o and gpt4o-mini) base model for use with [Autodistill](https://github.com/autodistill/autodistill).
 
 [GPT-4V](https://openai.com/research/gpt-4v-system-card), developed by OpenAI, is a multi-modal language model. With GPT-4V, you can ask questions about images in natural language. The `autodistill-gpt4v` module enables you to classify images using GPT-4V.
 
-This model uses the [gpt-4-vision-preview API](https://openai.com/blog/new-models-and-developer-products-announced-at-devday) announced by OpenAI on November 6th, 2023.
+This model can use all GPT4 Vision models using the following model names:
+- gpt-4o
+- gpt-4o-mini
+- gpt-4-turbo
 
 > [!NOTE]  
 > Using this project will incur billing charges for API calls to the OpenAI GPT-4 Vision API.
@@ -51,7 +54,8 @@ base_model = GPT4V(
             "a forklift": "forklift"
         }
     ),
-    api_key="OPENAI_API_KEY"
+    api_key="OPENAI_API_KEY",
+    model="gpt-4o-mini
 )
 base_model.label("./context_images", extension=".jpeg")
 ```
